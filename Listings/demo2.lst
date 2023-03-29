@@ -1,0 +1,47 @@
+C51 COMPILER V9.54   DEMO2                                                                 03/24/2023 19:34:17 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE DEMO2
+OBJECT MODULE PLACED IN .\Objects\demo2.obj
+COMPILER INVOKED BY: E:\keil5\C51\BIN\C51.EXE demo2.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\demo2
+                    -.lst) TABS(2) OBJECT(.\Objects\demo2.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <INTRINS.H>
+   3          
+   4          
+   5          /*“™»√’‚∏ˆ≥Ã–Ú µœ÷D8…¡À∏*/
+   6          
+   7          void Delay500us()   //@12.000MHz
+   8          {
+   9   1        unsigned char i;
+  10   1      
+  11   1        _nop_();
+  12   1        i = 247;
+  13   1        while (--i);
+  14   1      }
+  15          
+  16          void main()
+  17          {
+  18   1        /*ledµ∆∏ﬂµÁ∆Ω1£¨µÕµÁ∆Ω0£¨∏ﬂµÁ∆Ω «≤ª¡¡*/
+  19   1        P2 = 0x7f;//D8¡¡
+  20   1        Delay500us();
+  21   1        P2 = 0xff;//D8√
+  22   1        Delay500us();
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     18    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
