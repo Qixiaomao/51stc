@@ -1,0 +1,69 @@
+C51 COMPILER V9.54   MAIN                                                                  03/29/2023 18:38:32 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          
+   4          void Delay(unsigned int xms)    //@12.000MHz
+   5          {
+   6   1        unsigned char i, j;
+   7   1        while(xms){
+   8   2        i = 2;
+   9   2        j = 239;
+  10   2        do
+  11   2        {
+  12   3          while (--j);
+  13   3        } while (--i);
+  14   2        xms--;
+  15   2      }
+  16   1        }
+  17          
+  18          
+  19          void main()
+  20          {
+  21   1        while(1){
+  22   2        P2 = 0xfe; //1111 1110 D1
+  23   2        Delay(200);
+  24   2        P2 = 0xfd; //1111 1101 D2
+  25   2        Delay(200);
+  26   2        P2 = 0xfb; //1111 1011 D3
+  27   2        Delay(200);
+  28   2        P2 = 0xf7; //1111 0111 D4
+  29   2        Delay(200);
+  30   2        P2 = 0xef; //1110 1111 D5
+  31   2        Delay(200);
+  32   2        P2 = 0xdf; //1101 1111 D6
+  33   2        Delay(200);
+  34   2        P2 = 0xbf; //1011 1111 D7
+  35   2        Delay(200);
+  36   2        P2 = 0x7f; //0111 1111 D8
+  37   2        Delay(200);
+  38   2        
+  39   2        
+  40   2        }
+  41   1      
+  42   1      }
+  43          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     74    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.54   MAIN                                                                  03/29/2023 18:38:32 PAGE 2   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
