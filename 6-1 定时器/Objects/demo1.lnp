@@ -1,0 +1,6 @@
+".\Objects\main.obj",
+".\Objects\Timer0.obj",
+".\Objects\Delay.obj",
+".\Objects\Key.obj" 
+TO ".\Objects\demo1" 
+PRINT(".\Listings\demo1.m51") RAMSIZE(256) 
